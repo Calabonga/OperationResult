@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFrameworks>netstandard2.1;netcoreapp2.2;netcoreapp3.1;</TargetFrameworks>
+    <RuntimeFrameworkVersion Condition="'$(TargetFramework)' == 'netcoreapp2.2'">2.2.0</RuntimeFrameworkVersion>
+    <AssemblyName>Calabonga.OperationResults</AssemblyName>
+    <RootNamespace>Calabonga.OperationResults</RootNamespace>
+    <Version>2.1.3</Version>
+    <ApplicationIcon></ApplicationIcon>
+    <Authors>Calabonga</Authors>
+    <Company>Calabonga SOFT</Company>
+    <Description>This is some helpful classes like OperationResult. Simple wrapped for result operation for any returned data</Description>
+    <Copyright>Calabonga 2016-2020</Copyright>
+    <PackageProjectUrl>https://www.calabonga.net/blog/post/operationresult-the-server-response-is-always-clear-to-the-user</PackageProjectUrl>
+    <PackageTags>calabonga web api operation result query params asp net core response</PackageTags>
+    <PackageReleaseNotes>ActivityId setter added</PackageReleaseNotes>
+    <AssemblyVersion>2.1.3.0</AssemblyVersion>
+    <Version>2.1.3</Version>
+    <FileVersion>2.1.3.0</FileVersion>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>OperationResultCore</PackageId>
+    <Product>OperationResultCore</Product>
+    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+    <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
+    <PackageIcon>logo.png</PackageIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="logo.png" Pack="true" PackagePath="" />
+  </ItemGroup>
+
+</Project>
