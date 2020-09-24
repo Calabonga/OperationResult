@@ -20,7 +20,7 @@ jobs:
     - name: Build
       run: dotnet build src/Calabonga.OperationResults.sln --configuration Release --no-restore 
     - name: Tests
-      run: dotnet tests
+      run: dotnet test src\Calabonga.OperationResults.sln
     - name: Publish OperationResultCore
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
