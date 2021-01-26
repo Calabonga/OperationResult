@@ -11,7 +11,7 @@
         /// </summary>
         public OperationResult<T> Create<T>()
         {
-            return new OperationResult<T>();
+            return new();
         }
     }
 }

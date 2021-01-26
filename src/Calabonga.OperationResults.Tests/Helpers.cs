@@ -20,7 +20,6 @@ namespace Calabonga.OperationResults.Tests
         }
     }
 
-
     public class Person
     {
         public string FirstName { get; set; }
