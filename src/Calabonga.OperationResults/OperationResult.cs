@@ -134,7 +134,6 @@ namespace Calabonga.OperationResults
     [Serializable]
     public class OperationResult<T> : OperationResult
     {
-
         /// <summary>
         /// Result for server operation
         /// </summary>
