@@ -14,9 +14,8 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="message"></param>
-        public static IHaveDataObject AddInfo(this OperationResult source, string message)
+        public static IHaveDataObject? AddInfo(this OperationResult source, string message)
         {
-            source.AppendLog(message);
             source.Metadata = new Metadata(source, message);
             return source.Metadata;
         }
@@ -26,9 +25,8 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="message"></param>
-        public static IHaveDataObject AddSuccess(this OperationResult source, string message)
+        public static IHaveDataObject? AddSuccess(this OperationResult source, string message)
         {
-            source.AppendLog(message);
             source.Metadata = new Metadata(source, message, MetadataType.Success);
             return source.Metadata;
         }
@@ -38,9 +36,8 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="message"></param>
-        public static IHaveDataObject AddWarning(this OperationResult source, string message)
+        public static IHaveDataObject? AddWarning(this OperationResult source, string message)
         {
-            source.AppendLog(message);
             source.Metadata = new Metadata(source, message, MetadataType.Warning);
             return source.Metadata;
         }
@@ -50,9 +47,8 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="message"></param>
-        public static IHaveDataObject AddError(this OperationResult source, string message)
+        public static IHaveDataObject? AddError(this OperationResult source, string message)
         {
-            source.AppendLog(message);
             source.Metadata = new Metadata(source, message, MetadataType.Error);
             return source.Metadata;
         }
@@ -62,13 +58,12 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="exception"></param>
-        public static IHaveDataObject AddError(this OperationResult source, Exception exception)
+        public static IHaveDataObject? AddError(this OperationResult source, Exception exception)
         {
             source.Exception = exception;
             source.Metadata = new Metadata(source, exception?.Message, MetadataType.Error);
             if (exception != null)
             {
-                source.AppendLog(exception.Message);
             }
             return source.Metadata;
         }
@@ -79,20 +74,10 @@ namespace Calabonga.OperationResults
         /// <param name="source"></param>
         /// <param name="message"></param>
         /// <param name="exception"></param>
-        public static IHaveDataObject AddError(this OperationResult source, string message, Exception exception)
+        public static IHaveDataObject? AddError(this OperationResult source, string message, Exception exception)
         {
             source.Exception = exception;
             source.Metadata = new Metadata(source, message, MetadataType.Error);
-            if (!string.IsNullOrEmpty(message))
-            {
-                source.AppendLog(message);
-            }
-
-            if (exception != null)
-            {
-                source.AppendLog(exception.Message);
-            }
-
             return source.Metadata;
         }
 
@@ -110,9 +95,6 @@ namespace Calabonga.OperationResults
             {
                 sb.AppendLine($"{source.Metadata.Message}");
             }
-
-            if (!source.Logs.Any()) return sb.ToString();
-            source.Logs.ToList().ForEach(x=>sb.AppendLine($"Log: {x}"));
             return sb.ToString();
 
         }

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using Newtonsoft.Json;
 using Xunit;
 
@@ -59,8 +58,8 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.Null(sut.Exception);
-            Assert.NotNull(sut.Metadata.Message);
-            Assert.Equal(Messages.Title1, sut.Metadata.Message);
+            Assert.NotNull(sut.Metadata?.Message);
+            Assert.Equal(Messages.Title1, sut.Metadata?.Message);
         }
 
         [Fact]
@@ -76,9 +75,9 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(sut.Exception);
-            Assert.NotNull(sut.Metadata.Message);
-            Assert.Equal(Messages.Title1, sut.Metadata.Message);
-            Assert.Equal(Messages.Title1, sut.Exception.Message);
+            Assert.NotNull(sut.Metadata?.Message);
+            Assert.Equal(Messages.Title1, sut.Metadata?.Message);
+            Assert.Equal(Messages.Title1, sut.Exception?.Message);
         }
 
         [Fact]
@@ -93,7 +92,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(customException);
 
             // assert
-            Assert.Equal(Messages.Title1, sut.Metadata.Message);
+            Assert.Equal(Messages.Title1, sut.Metadata?.Message);
         }
 
         [Fact]
@@ -107,7 +106,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(expected);
 
             // assert
-            Assert.Equal(expected, sut.Metadata.Message);
+            Assert.Equal(expected, sut.Metadata?.Message);
             Assert.IsType<Metadata>(sut.Metadata);
         }
 
@@ -122,8 +121,8 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(expected);
 
             // assert
-            Assert.Equal(expected, sut.Metadata.Message);
-            Assert.IsType<MetadataType>(sut.Metadata.Type);
+            Assert.Equal(expected, sut.Metadata?.Message);
+            Assert.IsType<MetadataType>(sut.Metadata?.Type);
         }
 
         [Fact]
@@ -137,7 +136,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(new CustomException(expected));
 
             // assert
-            Assert.IsType<string>(sut.Metadata.Message);
+            Assert.IsType<string>(sut.Metadata?.Message);
         }
 
         [Fact]
@@ -151,8 +150,8 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(expected);
 
             // assert
-            Assert.IsType<string>(sut.Metadata.Message);
-            Assert.IsType<MetadataType>(sut.Metadata.Type);
+            Assert.IsType<string>(sut.Metadata?.Message);
+            Assert.IsType<MetadataType>(sut.Metadata?.Type);
         }
 
         [Fact]
@@ -166,8 +165,8 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(expected);
 
             // assert
-            Assert.IsType<string>(sut.Metadata.Message);
-            Assert.Equal(MetadataType.Error, sut.Metadata.Type);
+            Assert.IsType<string>(sut.Metadata?.Message);
+            Assert.Equal(MetadataType.Error, sut.Metadata?.Type);
         }
 
         [Fact]
@@ -198,7 +197,7 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(sut.Exception);
-            Assert.NotNull(sut.Metadata.Message);
+            Assert.NotNull(sut.Metadata?.Message);
         }
 
         [Fact]
@@ -214,7 +213,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(expected, exception);
 
             // assert
-            Assert.Equal(expected, sut.Metadata.Message);
+            Assert.Equal(expected, sut.Metadata?.Message);
         }
 
         [Fact]
@@ -229,7 +228,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(exception);
 
             // assert
-            Assert.Equal(Messages.Title1, sut.Exception.Message);
+            Assert.Equal(Messages.Title1, sut.Exception?.Message);
         }
 
         [Fact]
@@ -260,8 +259,8 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(sut.Exception);
-            Assert.NotNull(sut.Metadata.DataObject);
-            Assert.Equal(Messages.Title1, sut.Metadata.DataObject.ToString());
+            Assert.NotNull(sut.Metadata?.DataObject);
+            Assert.Equal(Messages.Title1, sut.Metadata?.DataObject.ToString());
         }
 
         [Fact]
@@ -295,7 +294,7 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.Equal(MetadataType.Info, sut.Metadata.Type);
+            Assert.Equal(MetadataType.Info, sut.Metadata?.Type);
         }
 
         [Fact]
@@ -314,7 +313,7 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.Equal(MetadataType.Info, sut.Metadata.Type);
+            Assert.Equal(MetadataType.Info, sut.Metadata?.Type);
         }
 
         [Fact]
@@ -332,7 +331,7 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.Equal(expected, sut.Metadata.Message);
+            Assert.Equal(expected, sut.Metadata?.Message);
         }
 
         [Fact]
@@ -349,7 +348,7 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.Equal(expected, sut.Metadata.Message);
+            Assert.Equal(expected, sut.Metadata?.Message);
         }
 
         [Fact]
@@ -361,14 +360,14 @@ namespace Calabonga.OperationResults.Tests
             var data = Messages.Title1;
 
             // act
-            sut.AddInfo(data).AddData(data);
+            sut.AddInfo(data)?.AddData(data);
 
-            var actual = sut.Metadata.Message;
+            var actual = sut.Metadata?.Message;
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.NotNull(sut.Metadata.DataObject);
-            Assert.Equal(sut.Metadata.Message, actual);
+            Assert.NotNull(sut.Metadata?.DataObject);
+            Assert.Equal(sut.Metadata?.Message, actual);
         }
 
         [Fact]
@@ -380,16 +379,15 @@ namespace Calabonga.OperationResults.Tests
             var data = Messages.Title1;
 
             // act
-            sut.AddSuccess(data).AddData(data);
+            sut.AddSuccess(data)?.AddData(data);
 
-            var actual = sut.Metadata.Message;
+            var actual = sut.Metadata?.Message;
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.NotNull(sut.Metadata.DataObject);
-            Assert.Equal(sut.Metadata.Message, actual);
+            Assert.NotNull(sut.Metadata?.DataObject);
+            Assert.Equal(sut.Metadata?.Message, actual);
         }
-
 
         [Fact]
         [Trait("OperationResult", "AddWarning")]
@@ -400,14 +398,14 @@ namespace Calabonga.OperationResults.Tests
             var data = Messages.Title1;
 
             // act
-            sut.AddWarning(data).AddData(data);
+            sut.AddWarning(data)?.AddData(data);
 
-            var actual = sut.Metadata.Message;
+            var actual = sut.Metadata?.Message;
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.NotNull(sut.Metadata.DataObject);
-            Assert.Equal(sut.Metadata.Message, actual);
+            Assert.NotNull(sut.Metadata?.DataObject);
+            Assert.Equal(sut.Metadata?.Message, actual);
         }
 
         [Fact]
@@ -419,14 +417,14 @@ namespace Calabonga.OperationResults.Tests
             var data = Messages.Title1;
 
             // act
-            sut.AddError(data).AddData(data);
+            sut.AddError(data)?.AddData(data);
 
-            var actual = sut.Metadata.Message;
+            var actual = sut.Metadata?.Message;
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.NotNull(sut.Metadata.DataObject);
-            Assert.Equal(sut.Metadata.Message, actual);
+            Assert.NotNull(sut.Metadata?.DataObject);
+            Assert.Equal(sut.Metadata?.Message, actual);
         }
 
         [Fact]
@@ -438,14 +436,14 @@ namespace Calabonga.OperationResults.Tests
             var data = new SimpleCustomException();
 
             // act
-            sut.AddError(data).AddData(data);
+            sut.AddError(data)?.AddData(data);
 
-            var actual = sut.Metadata.Message;
+            var actual = sut.Metadata?.Message;
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.NotNull(sut.Metadata.DataObject);
-            Assert.Equal(sut.Exception.Message, actual);
+            Assert.NotNull(sut.Metadata?.DataObject);
+            Assert.Equal(sut.Exception?.Message, actual);
         }
 
         [Fact]
@@ -457,13 +455,13 @@ namespace Calabonga.OperationResults.Tests
             var data = new SimpleCustomException();
 
             // act
-            sut.AddError(data).AddData(Messages.Title1);
+            sut.AddError(data)?.AddData(Messages.Title1);
 
-            var actual = sut.Metadata.Message;
+            var actual = sut.Metadata?.Message;
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.NotNull(sut.Metadata.DataObject);
+            Assert.NotNull(sut.Metadata?.DataObject);
             Assert.NotEqual(Messages.Title1, actual);
         }
 
@@ -477,11 +475,11 @@ namespace Calabonga.OperationResults.Tests
             var exception2 = new CustomException(Messages.Title1);
 
             // act
-            sut.AddError(exception1).AddData(exception2);
+            sut.AddError(exception1)?.AddData(exception2);
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.NotNull(sut.Metadata.DataObject);
+            Assert.NotNull(sut.Metadata?.DataObject);
             Assert.NotNull(sut.Exception);
 
         }
@@ -495,11 +493,11 @@ namespace Calabonga.OperationResults.Tests
             var data = Messages.Title1;
 
             // act
-            sut.AddError(data).AddData(data);
+            sut.AddError(data)?.AddData(data);
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.NotNull(sut.Metadata.DataObject);
+            Assert.NotNull(sut.Metadata?.DataObject);
             Assert.Null(sut.Exception);
         }
 
@@ -513,15 +511,15 @@ namespace Calabonga.OperationResults.Tests
 
             // act
 
-            sut.AddInfo(data).AddData(data);
-            sut.AddSuccess(data).AddData(data);
+            sut.AddInfo(data)?.AddData(data);
+            sut.AddSuccess(data)?.AddData(data);
 
-            var actual = sut.Metadata.Message;
+            var actual = sut.Metadata?.Message;
 
             // assert
             Assert.NotNull(sut.Metadata);
-            Assert.NotNull(sut.Metadata.DataObject);
-            Assert.Equal(sut.Metadata.Message, actual);
+            Assert.NotNull(sut.Metadata?.DataObject);
+            Assert.Equal(sut.Metadata?.Message, actual);
         }
 
         [Fact]
@@ -536,7 +534,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddSuccess(exception.Message);
 
             // assert
-            Assert.NotNull(sut.Metadata.Message);
+            Assert.NotNull(sut.Metadata?.Message);
         }
 
         [Fact]
@@ -551,7 +549,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddWarning(exception.ToString());
 
             // assert
-            Assert.NotNull(sut.Metadata.Message);
+            Assert.NotNull(sut.Metadata?.Message);
         }
 
         [Fact]
@@ -566,7 +564,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(exception);
 
             // assert
-            Assert.NotNull(sut.Metadata.Message);
+            Assert.NotNull(sut.Metadata?.Message);
         }
 
         [Fact]
@@ -581,8 +579,8 @@ namespace Calabonga.OperationResults.Tests
             sut.AddInfo(exception.ToString());
 
             // assert
-            Assert.NotNull(sut.Metadata.Message);
-            Assert.Equal(MetadataType.Info, sut.Metadata.Type);
+            Assert.NotNull(sut.Metadata?.Message);
+            Assert.Equal(MetadataType.Info, sut.Metadata?.Type);
         }
 
         [Fact]
@@ -597,8 +595,8 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(exception);
 
             // assert
-            Assert.NotNull(sut.Metadata.Message);
-            Assert.Equal(MetadataType.Error, sut.Metadata.Type);
+            Assert.NotNull(sut.Metadata?.Message);
+            Assert.Equal(MetadataType.Error, sut.Metadata?.Type);
         }
 
         [Fact]
@@ -614,7 +612,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddSuccess(exception.ToString());
 
             // assert
-            Assert.Equal(MetadataType.Success, sut.Metadata.Type);
+            Assert.Equal(MetadataType.Success, sut.Metadata?.Type);
         }
 
         [Fact]
@@ -630,7 +628,7 @@ namespace Calabonga.OperationResults.Tests
             sut.AddWarning(exception.ToString());
 
             // assert
-            Assert.Equal(MetadataType.Warning, sut.Metadata.Type);
+            Assert.Equal(MetadataType.Warning, sut.Metadata?.Type);
         }
 
         [Fact]
@@ -642,10 +640,10 @@ namespace Calabonga.OperationResults.Tests
             var exception = new SimpleCustomException();
 
             // act
-            sut.AddError(exception).AddData(exception);
+            sut.AddError(exception)?.AddData(exception);
 
             // assert
-            Assert.NotNull(sut.Metadata.Message);
+            Assert.NotNull(sut.Metadata?.Message);
             Assert.IsType<SimpleCustomException>(sut.Exception);
         }
 
@@ -658,10 +656,10 @@ namespace Calabonga.OperationResults.Tests
             var exception = new SimpleCustomException();
 
             // act
-            sut.AddError(exception).AddData(exception);
+            sut.AddError(exception)?.AddData(exception);
 
             // assert
-            Assert.IsType<SimpleCustomException>(sut.Metadata.DataObject);
+            Assert.IsType<SimpleCustomException>(sut.Metadata?.DataObject);
             Assert.IsType<SimpleCustomException>(sut.Exception);
         }
 
@@ -675,10 +673,10 @@ namespace Calabonga.OperationResults.Tests
             var exception2 = new CustomException("TEST");
 
             // act
-            sut.AddError(exception1).AddData(exception2);
+            sut.AddError(exception1)?.AddData(exception2);
 
             // assert
-            Assert.IsType<CustomException>(sut.Metadata.DataObject);
+            Assert.IsType<CustomException>(sut.Metadata?.DataObject);
             Assert.IsType<SimpleCustomException>(sut.Exception);
         }
 
@@ -693,10 +691,10 @@ namespace Calabonga.OperationResults.Tests
             var exception2 = new CustomException(expected);
 
             // act
-            sut.AddError(exception1).AddData(exception2);
+            sut.AddError(exception1)?.AddData(exception2);
 
             // assert
-            Assert.NotEqual(expected, sut.Metadata.Message);
+            Assert.NotEqual(expected, sut.Metadata?.Message);
         }
 
         [Fact]
@@ -710,10 +708,10 @@ namespace Calabonga.OperationResults.Tests
             var exception2 = new CustomException("NOT THIS MESSAGE");
 
             // act
-            sut.AddError(exception1).AddData(exception2);
+            sut.AddError(exception1)?.AddData(exception2);
 
             // assert
-            Assert.Equal(expected, sut.Metadata.Message);
+            Assert.Equal(expected, sut.Metadata?.Message);
         }
 
 
@@ -728,7 +726,7 @@ namespace Calabonga.OperationResults.Tests
             var exception2 = new CustomException("NOT THIS MESSAGE");
 
             // act
-            sut.AddError(exception1).AddData(exception2);
+            sut.AddError(exception1)?.AddData(exception2);
             var actual = sut.GetMetadataMessages();
 
             // assert
@@ -747,7 +745,7 @@ namespace Calabonga.OperationResults.Tests
             var exception2 = new CustomException(notExpected);
 
             // act
-            sut.AddError(exception1).AddData(exception2);
+            sut.AddError(exception1)?.AddData(exception2);
             var actual = sut.GetMetadataMessages();
 
             // assert
@@ -822,7 +820,7 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(op);
-            Assert.Equal(MetadataType.Info, sut.Metadata.Type);
+            Assert.Equal(MetadataType.Info, sut.Metadata?.Type);
         }
 
         [Fact]
@@ -841,7 +839,7 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(op);
-            Assert.NotNull(sut.Metadata.Message);
+            Assert.NotNull(sut.Metadata?.Message);
         }
 
         [Fact]
@@ -861,8 +859,8 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(op);
-            Assert.Equal(MetadataType.Success, sut.Metadata.Type);
-            Assert.Equal(expected, sut.Metadata.Message);
+            Assert.Equal(MetadataType.Success, sut.Metadata?.Type);
+            Assert.Equal(expected, sut.Metadata?.Message);
         }
 
         [Fact]
@@ -882,8 +880,8 @@ namespace Calabonga.OperationResults.Tests
 
             // assert
             Assert.NotNull(op);
-            Assert.Equal(MetadataType.Error, sut.Metadata.Type);
-            Assert.Equal(expected, sut.Metadata.Message);
+            Assert.Equal(MetadataType.Error, sut.Metadata?.Type);
+            Assert.Equal(expected, sut.Metadata?.Message);
         }
 
         [Fact]
@@ -894,7 +892,7 @@ namespace Calabonga.OperationResults.Tests
             var sut = _fixture.Create<Person>();
             const string expected = "THIS MESSAGE";
             sut.Result = new Person { FirstName = "Test", LastName = "Test" };
-            sut.AddError(new CustomException(expected)).AddData(new SimpleCustomException());
+            sut.AddError(new CustomException(expected))?.AddData(new SimpleCustomException());
 
             // act
             var data = JsonConvert.SerializeObject(sut);
@@ -903,243 +901,11 @@ namespace Calabonga.OperationResults.Tests
             // assert
             Assert.NotNull(sut.Metadata);
             Assert.NotNull(op);
-            Assert.NotEqual(MetadataType.Success, sut.Metadata.Type);
-            Assert.Equal(expected, sut.Metadata.Message);
+            Assert.NotEqual(MetadataType.Success, sut.Metadata?.Type);
+            Assert.Equal(expected, sut.Metadata?.Message);
             Assert.NotNull(op.Metadata);
         }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_have_internal_logger_with_appendLog_method()
-        {
-            // arrange
-            const string expected = "TEST";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expected);
-            var actual = sut.Logs.Single(x => x.Contains(expected));
-
-            // assert
-            Assert.Contains(expected, actual);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_have_internal_logger_with_appendLog_method_not_creared_after_addInfo()
-        {
-            // arrange
-            const string expected = "TEST";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expected);
-            sut.AddInfo(expected);
-            var actual = sut.Logs.Count(x => x.Contains(expected));
-
-            // assert
-            Assert.Equal(2, actual);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_have_append_null_message()
-        {
-            // arrange
-            const string expected = null;
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expected);
-            var message = sut.Logs.Count();
-
-            // assert
-            Assert.Equal(0, message);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_not_append_Info_to_logger()
-        {
-            // arrange
-            const string expected = "TEST";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expected);
-            sut.AddInfo(expected);
-            var actual = sut.Logs.Count();
-
-            // assert
-            Assert.Equal(2, actual);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_not_append_Info_to_logger_and_keep_Info()
-        {
-            // arrange
-            const string expected = "TEST";
-            const string expected1 = "TEST1";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expected1);
-            sut.AddInfo(expected);
-            var actual = sut.Logs.Count();
-
-            // assert
-            Assert.Equal(2, actual);
-            Assert.NotEqual(expected1, sut.GetMetadataMessages());
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_append_Info_to_logger_and_keep_Info()
-        {
-            // arrange
-            const string expected = "TEST";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expected);
-            sut.AddInfo(expected);
-            var actual = sut.Logs.Count();
-            var isContains = sut.GetMetadataMessages().Contains(expected);
-
-            // assert
-            Assert.Equal(2, actual);
-            Assert.True(isContains);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_return_info_with_logs_for_GetMetadataMessages()
-        {
-            // arrange
-            const string expectedText = "TEST";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expectedText);
-            sut.AddInfo(expectedText);
-            var actual = sut.Logs.Count();
-
-            // assert
-            Assert.Equal(2, actual);
-            Assert.Contains(expectedText, sut.GetMetadataMessages());
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_cut_message_when_log_adding_to_500()
-        {
-            // arrange
-            const string expected = "TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG_TEST_LONG_LONG_TEXT_LONG";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expected);
-            var length = sut.Logs.First().Length;
-
-            // assert
-            Assert.Equal(500, length);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_return_info_with_logs_for_GetMetadataMessages_by_mode_MessageWithLogs_and_Logs()
-        {
-            // arrange
-            const string expectedText1 = "TEST1";
-            const string expectedText2 = "TEST2";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expectedText1);
-            sut.AddInfo(expectedText2);
-            var actual = sut.GetMetadataMessages().Contains(expectedText1);
-
-            // assert
-            Assert.True(actual);
-            Assert.Equal(2, sut.Logs.Count());
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_Serialize_Logs()
-        {
-            // arrange
-            const string expectedText1 = "TEST1";
-            const string expectedText2 = "TEST2";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expectedText1);
-            sut.AppendLog(expectedText2);
-            var data = JsonConvert.SerializeObject(sut);
-            var deserializeObject = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
-
-            // assert
-            Assert.NotNull(deserializeObject);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_Serialize_Logs_with_data()
-        {
-            // arrange
-            const string expectedText1 = "TEST1";
-            const string expectedText2 = "TEST2";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expectedText1);
-            sut.AppendLog(expectedText2);
-            var data = JsonConvert.SerializeObject(sut);
-            var deserializeObject = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
-
-            // assert
-            Assert.NotNull(deserializeObject.Logs);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_Serialize_Logs_with_data_count_2()
-        {
-            // arrange
-            const int expected = 2;
-            const string expectedText1 = "TEST1";
-            const string expectedText2 = "TEST2";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AppendLog(expectedText1);
-            sut.AppendLog(expectedText2);
-            var data = JsonConvert.SerializeObject(sut);
-            var deserializeObject = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
-            var actual = deserializeObject.Logs.Count();
-
-            // assert
-            Assert.Equal(expected, actual);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_appendLog_when_addError()
-        {
-            // arrange
-            const string expected = "TEST";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.AddError(expected);
-            var exists = sut.Logs.Single(x => x.Contains(expected));
-
-            // assert
-            Assert.NotNull(exists);
-        }
-
+        
         [Fact]
         [Trait("OperationResult", "AddError")]
         public void ItShould_Exception_for_addError_and_Message()
@@ -1154,70 +920,6 @@ namespace Calabonga.OperationResults.Tests
             // assert
             Assert.NotNull(sut.Exception);
             Assert.NotNull(sut.Metadata);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "ActivityId")]
-        public void ItShould_have_ActivityId_can_set()
-        {
-            // arrange
-            const string expected = "TEST";
-            var sut = _fixture.Create<Person>();
-
-            // act
-            sut.ActivityId = expected;
-            
-            // assert
-            Assert.Equal(expected, sut.ActivityId);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "ActivityId")]
-        public void ItShould_have_ActivityId_predefined()
-        {
-            // arrange
-            var sut = _fixture.Create<Person>();
-
-            // act
-            
-            // assert
-            Assert.NotNull(sut.ActivityId);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_Serialize_ActivityId_and_deserialize_another()
-        {
-            // arrange
-            const string expectedText1 = "TEST1";
-            var sut = _fixture.Create<Person>();
-            var expected = sut.ActivityId;
-
-            // act
-            sut.AppendLog(expectedText1);
-            var data = JsonConvert.SerializeObject(sut);
-            var deserializeObject = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
-            var actual = deserializeObject.ActivityId;
-
-            // assert
-            Assert.Equal(expected, actual);
-        }
-
-        [Fact]
-        [Trait("OperationResult", "AppendLog")]
-        public void ItShould_Serialize_ActivityId()
-        {
-            // arrange
-            const string expectedText1 = "TEST1";
-            var sut = _fixture.Create<Person>();
-            var expected = sut.ActivityId;
-
-            // act
-            sut.AppendLog(expectedText1);
-            var data = JsonConvert.SerializeObject(sut);
-
-            // assert
-            Assert.Contains(expected, data);
         }
     }
 }

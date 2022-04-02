@@ -1,30 +1,31 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
-    <AssemblyName>Calabonga.OperationResults</AssemblyName>
-    <RootNamespace>Calabonga.OperationResults</RootNamespace>
-    <Version>3.0.1</Version>
-    <ApplicationIcon></ApplicationIcon>
-    <Authors>Calabonga</Authors>
-    <Company>Calabonga SOFT</Company>
-    <Description>This is some helpful classes like OperationResult. Simple wrapped for result operation for any returned data from API or MVC</Description>
-    <Copyright>Calabonga 2016-2021</Copyright>
-    <PackageProjectUrl>https://www.calabonga.net/blog/post/operationresult-the-server-response-is-always-clear-to-the-user</PackageProjectUrl>
-    <PackageTags>calabonga web api operation result query params asp net core response</PackageTags>
-    <PackageReleaseNotes>Migrated to NET5.0</PackageReleaseNotes>
-    <AssemblyVersion>3.0.1.0</AssemblyVersion>
-    <FileVersion>3.0.1.0</FileVersion>
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <PackageId>OperationResultCore</PackageId>
-    <Product>OperationResultCore</Product>
-    <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
-    <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
-    <PackageIcon>logo.png</PackageIcon>
-  </PropertyGroup>
+    <PropertyGroup>
+        <TargetFramework>net6.0</TargetFramework>
+        <AssemblyName>Calabonga.OperationResults</AssemblyName>
+        <RootNamespace>Calabonga.OperationResults</RootNamespace>
+        <Version>4.0.0-beta1</Version>
+        <ApplicationIcon></ApplicationIcon>
+        <Authors>Calabonga</Authors>
+        <Company>Calabonga SOFT</Company>
+        <Description>This is some helpful classes like OperationResult. Simple wrapped for result operation for any returned data from API or MVC</Description>
+        <Copyright>Calabonga 2016-2021</Copyright>
+        <PackageProjectUrl>https://www.calabonga.net/blog/post/operationresult-the-server-response-is-always-clear-to-the-user</PackageProjectUrl>
+        <PackageTags>calabonga web api operation result query params asp net core response</PackageTags>
+        <PackageReleaseNotes>Migrated to NET6.0</PackageReleaseNotes>
+        <AssemblyVersion>4.0.0.0</AssemblyVersion>
+        <FileVersion>4.0.0.0</FileVersion>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <PackageId>OperationResultCore</PackageId>
+        <Product>OperationResultCore</Product>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
+        <PackageIcon>logo.png</PackageIcon>
+        <Nullable>enable</Nullable>
+    </PropertyGroup>
 
-  <ItemGroup>
-    <None Include="logo.png" Pack="true" PackagePath="" />
-  </ItemGroup>
+    <ItemGroup>
+        <None Include="logo.png" Pack="true" PackagePath="" />
+    </ItemGroup>
 
 </Project>
