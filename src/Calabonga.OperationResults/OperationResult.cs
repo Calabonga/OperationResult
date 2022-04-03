@@ -1,5 +1,4 @@
 using System;
-using System.Collections.Generic;
 
 namespace Calabonga.OperationResults
 {
@@ -26,9 +25,9 @@ namespace Calabonga.OperationResults
         /// <param name="result"></param>
         /// <param name="exception"></param>
         /// <returns></returns>
-        public static OperationResult<TResult?> CreateResult<TResult>(TResult result, Exception? exception = null)
+        public static OperationResult<TResult> CreateResult<TResult>(TResult result, Exception? exception = null)
         {
-            var operation = new OperationResult<TResult?>
+            var operation = new OperationResult<TResult>
             {
                 Result = result,
                 Exception = exception
@@ -41,9 +40,9 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <typeparam name="TResult"></typeparam>
         /// <returns></returns>
-        public static OperationResult<TResult?> CreateResult<TResult>()
+        public static OperationResult<TResult> CreateResult<TResult>()
         {
-            return CreateResult<TResult?>(default(TResult?));
+            return CreateResult(default(TResult)!);
         }
     }
 
