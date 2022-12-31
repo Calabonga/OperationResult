@@ -1,6 +1,4 @@
-using System;
-using System.Linq;
-using System.Text;
+﻿using System.Text;
 
 namespace Calabonga.OperationResults
 {
@@ -14,8 +12,13 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="message"></param>
-        public static IHaveDataObject? AddInfo(this OperationResult source, string message)
+        public static IHaveDataObject? AddInfo(this OperationResult? source, string message)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             source.Metadata = new Metadata(source, message);
             return source.Metadata;
         }
@@ -25,8 +28,13 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="message"></param>
-        public static IHaveDataObject? AddSuccess(this OperationResult source, string message)
+        public static IHaveDataObject? AddSuccess(this OperationResult? source, string message)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             source.Metadata = new Metadata(source, message, MetadataType.Success);
             return source.Metadata;
         }
@@ -36,8 +44,13 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="message"></param>
-        public static IHaveDataObject? AddWarning(this OperationResult source, string message)
+        public static IHaveDataObject? AddWarning(this OperationResult? source, string message)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             source.Metadata = new Metadata(source, message, MetadataType.Warning);
             return source.Metadata;
         }
@@ -47,8 +60,13 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="message"></param>
-        public static IHaveDataObject? AddError(this OperationResult source, string message)
+        public static IHaveDataObject? AddError(this OperationResult? source, string message)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             source.Metadata = new Metadata(source, message, MetadataType.Error);
             return source.Metadata;
         }
@@ -58,13 +76,19 @@ namespace Calabonga.OperationResults
         /// </summary>
         /// <param name="source"></param>
         /// <param name="exception"></param>
-        public static IHaveDataObject? AddError(this OperationResult source, Exception exception)
+        public static IHaveDataObject? AddError(this OperationResult? source, Exception? exception)
         {
-            source.Exception = exception;
-            source.Metadata = new Metadata(source, exception?.Message, MetadataType.Error);
+            if (source == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             if (exception != null)
             {
+                source.Exception = exception;
             }
+
+            source.Metadata = new Metadata(source, exception?.Message ?? "Something went wrong", MetadataType.Error);
             return source.Metadata;
         }
 
@@ -74,8 +98,13 @@ namespace Calabonga.OperationResults
         /// <param name="source"></param>
         /// <param name="message"></param>
         /// <param name="exception"></param>
-        public static IHaveDataObject? AddError(this OperationResult source, string message, Exception exception)
+        public static IHaveDataObject? AddError(this OperationResult? source, string message, Exception exception)
         {
+            if (source == null)
+            {
+                throw new ArgumentNullException();
+            }
+
             source.Exception = exception;
             source.Metadata = new Metadata(source, message, MetadataType.Error);
             return source.Metadata;
@@ -88,7 +117,10 @@ namespace Calabonga.OperationResults
         /// <returns></returns>
         public static string GetMetadataMessages(this OperationResult source)
         {
-            if (source == null) throw new ArgumentNullException();
+            if (source == null)
+            {
+                throw new ArgumentNullException();
+            }
 
             var sb = new StringBuilder();
             if (source.Metadata != null)

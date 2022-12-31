@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace Calabonga.OperationResults
+﻿namespace Calabonga.OperationResults
 {
     /// <summary>
     /// Metadata object base for all type  <see cref="IMetadataMessage"/>
@@ -8,27 +6,26 @@ namespace Calabonga.OperationResults
     [Serializable]
     public class Metadata : IMetadataMessage
     {
-        private readonly OperationResult _source;
+        private readonly OperationResult? _source;
 
         public Metadata()
         {
             Type = MetadataType.Info;
+            DataObject = new object();
         }
 
-        public Metadata(OperationResult source, string message) : this()
+        public Metadata(OperationResult? source, string message)
+        : this()
         {
             _source = source;
             Message = message;
         }
 
-        public Metadata(OperationResult source, string message, MetadataType type = MetadataType.Info)
-        {
-            Type = type;
-            _source = source;
-            Message = message;
-        }
+        public Metadata(OperationResult? source, string message, MetadataType type = MetadataType.Info)
+            : this(source, message)
+            => Type = type;
 
-        public string Message { get; }
+        public string? Message { get; }
 
         public MetadataType Type { get; }
 
@@ -41,11 +38,18 @@ namespace Calabonga.OperationResults
         /// <param name="data"></param>
         public void AddData(object data)
         {
+            if (_source == null)
+            {
+                return;
+            }
+
             if (data is Exception exception && _source.Metadata == null)
             {
                 _source.Metadata = new Metadata(_source, exception.Message);
+                return;
             }
-            else
+
+            if (_source?.Metadata != null)
             {
                 _source.Metadata.DataObject = data;
             }

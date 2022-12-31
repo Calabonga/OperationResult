@@ -6,7 +6,7 @@
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>Calabonga.OperationResults</Title>
-        <Version>4.0.1</Version>
+        <Version>4.0.2-beta1</Version>
         <Authors>Calabonga</Authors>
         <Company>Calabonga SOFT</Company>
         <Product>OperationResultCore</Product>
@@ -18,17 +18,17 @@
 		<RepositoryUrl>https://github.com/Calabonga/OperationResult/</RepositoryUrl>
 		<RepositoryType>git</RepositoryType>
         <PackageTags>calabonga web api operation result asp net core response rfc7807</PackageTags>
-        <PackageReleaseNotes>Metadata for package updated. Some manual added or extended.</PackageReleaseNotes>
+        <PackageReleaseNotes>NET6.0 nullable optimized</PackageReleaseNotes>
 		<PackageLicenseExpression>MIT</PackageLicenseExpression>
 		<AssemblyName>Calabonga.OperationResults</AssemblyName>
         <RootNamespace>Calabonga.OperationResults</RootNamespace>
-        <AssemblyVersion>4.0.1.0</AssemblyVersion>
-        <FileVersion>4.0.1.0</FileVersion>
+        <AssemblyVersion>4.0.2.0</AssemblyVersion>
+        <FileVersion>4.0.2.0</FileVersion>
         <PackageId>OperationResultCore</PackageId>
         
         <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
         
-        <IncludeSymbols>True</IncludeSymbols>
+        <IncludeSymbols>False</IncludeSymbols>
     </PropertyGroup>
 
     <ItemGroup>
@@ -36,7 +36,13 @@
           <Pack>True</Pack>
           <PackagePath>\</PackagePath>
         </None>
-        <None Include="logo.png" Pack="true" PackagePath="" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="logo.png">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>

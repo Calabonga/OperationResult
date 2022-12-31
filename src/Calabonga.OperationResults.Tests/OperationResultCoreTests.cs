@@ -1,5 +1,5 @@
 ﻿using System;
-using Newtonsoft.Json;
+using System.Text.Json;
 using Xunit;
 
 namespace Calabonga.OperationResults.Tests
@@ -252,10 +252,10 @@ namespace Calabonga.OperationResults.Tests
         {
             // arrange
             var sut = _fixture.Create<string>();
-            var exception = new CustomException(null);
+            var exception = new CustomException("Error");
 
             // act
-            sut.AddError(exception).AddData(Messages.Title1);
+            sut.AddError(exception)?.AddData(Messages.Title1);
 
             // assert
             Assert.NotNull(sut.Exception);
@@ -762,7 +762,7 @@ namespace Calabonga.OperationResults.Tests
             sut.Result = expected;
 
             // act
-            var data = JsonConvert.SerializeObject(sut);
+            var data = JsonSerializer.Serialize(sut);
 
             // assert
             Assert.NotNull(data);
@@ -779,8 +779,8 @@ namespace Calabonga.OperationResults.Tests
             sut.Result = expected;
 
             // act
-            var data = JsonConvert.SerializeObject(sut);
-            var op = JsonConvert.DeserializeObject<OperationResult<string>>(data);
+            var data = JsonSerializer.Serialize(sut);
+            var op = JsonSerializer.Deserialize<OperationResult<string>>(data);
 
             // assert
             Assert.NotNull(op);
@@ -797,8 +797,8 @@ namespace Calabonga.OperationResults.Tests
 
 
             // act
-            var data = JsonConvert.SerializeObject(sut);
-            var op = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
+            var data = JsonSerializer.Serialize(sut);
+            var op = JsonSerializer.Deserialize<OperationResult<Person>>(data);
 
             // assert
             Assert.NotNull(op);
@@ -815,8 +815,8 @@ namespace Calabonga.OperationResults.Tests
 
 
             // act
-            var data = JsonConvert.SerializeObject(sut);
-            var op = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
+            var data = JsonSerializer.Serialize(sut);
+            var op = JsonSerializer.Deserialize<OperationResult<Person>>(data);
 
             // assert
             Assert.NotNull(op);
@@ -834,8 +834,8 @@ namespace Calabonga.OperationResults.Tests
 
 
             // act
-            var data = JsonConvert.SerializeObject(sut);
-            var op = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
+            var data = JsonSerializer.Serialize(sut);
+            var op = JsonSerializer.Deserialize<OperationResult<Person>>(data);
 
             // assert
             Assert.NotNull(op);
@@ -854,8 +854,8 @@ namespace Calabonga.OperationResults.Tests
 
 
             // act
-            var data = JsonConvert.SerializeObject(sut);
-            var op = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
+            var data = JsonSerializer.Serialize(sut);
+            var op = JsonSerializer.Deserialize<OperationResult<Person>>(data);
 
             // assert
             Assert.NotNull(op);
@@ -875,8 +875,8 @@ namespace Calabonga.OperationResults.Tests
 
 
             // act
-            var data = JsonConvert.SerializeObject(sut);
-            var op = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
+            var data = JsonSerializer.Serialize(sut);
+            var op = JsonSerializer.Deserialize<OperationResult<Person>>(data);
 
             // assert
             Assert.NotNull(op);
@@ -895,8 +895,8 @@ namespace Calabonga.OperationResults.Tests
             sut.AddError(new CustomException(expected))?.AddData(new SimpleCustomException());
 
             // act
-            var data = JsonConvert.SerializeObject(sut);
-            var op = JsonConvert.DeserializeObject<OperationResult<Person>>(data);
+            var data = JsonSerializer.Serialize(sut);
+            var op = JsonSerializer.Deserialize<OperationResult<Person>>(data);
 
             // assert
             Assert.NotNull(sut.Metadata);
@@ -905,7 +905,7 @@ namespace Calabonga.OperationResults.Tests
             Assert.Equal(expected, sut.Metadata?.Message);
             Assert.NotNull(op.Metadata);
         }
-        
+
         [Fact]
         [Trait("OperationResult", "AddError")]
         public void ItShould_Exception_for_addError_and_Message()
@@ -916,7 +916,7 @@ namespace Calabonga.OperationResults.Tests
 
             // act
             sut.AddError(expected, new SimpleCustomException());
-            
+
             // assert
             Assert.NotNull(sut.Exception);
             Assert.NotNull(sut.Metadata);

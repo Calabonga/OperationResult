@@ -8,7 +8,7 @@
         /// <summary>
         /// Message
         /// </summary>
-        string Message { get; }
+        string? Message { get; }
 
         /// <summary>
         /// Data object
