@@ -1,0 +1,500 @@
+### YamlMime:XRefMap
+sorted: true
+references:
+- uid: Calabonga.OperationResults
+  name: Calabonga.OperationResults
+  href: api/Calabonga.OperationResults.html
+  commentId: N:Calabonga.OperationResults
+  fullName: Calabonga.OperationResults
+  nameWithType: Calabonga.OperationResults
+- uid: Calabonga.OperationResults.Empty
+  name: Empty
+  href: api/Calabonga.OperationResults.Empty.html
+  commentId: T:Calabonga.OperationResults.Empty
+  fullName: Calabonga.OperationResults.Empty
+  nameWithType: Empty
+- uid: Calabonga.OperationResults.Empty._value
+  name: _value
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty__value
+  commentId: F:Calabonga.OperationResults.Empty._value
+  fullName: Calabonga.OperationResults.Empty._value
+  nameWithType: Empty._value
+- uid: Calabonga.OperationResults.Empty.CompareTo(Calabonga.OperationResults.Empty)
+  name: CompareTo(Empty)
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_CompareTo_Calabonga_OperationResults_Empty_
+  commentId: M:Calabonga.OperationResults.Empty.CompareTo(Calabonga.OperationResults.Empty)
+  fullName: Calabonga.OperationResults.Empty.CompareTo(Calabonga.OperationResults.Empty)
+  nameWithType: Empty.CompareTo(Empty)
+- uid: Calabonga.OperationResults.Empty.CompareTo*
+  name: CompareTo
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_CompareTo_
+  commentId: Overload:Calabonga.OperationResults.Empty.CompareTo
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Empty.CompareTo
+  nameWithType: Empty.CompareTo
+- uid: Calabonga.OperationResults.Empty.Equals(Calabonga.OperationResults.Empty)
+  name: Equals(Empty)
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_Equals_Calabonga_OperationResults_Empty_
+  commentId: M:Calabonga.OperationResults.Empty.Equals(Calabonga.OperationResults.Empty)
+  fullName: Calabonga.OperationResults.Empty.Equals(Calabonga.OperationResults.Empty)
+  nameWithType: Empty.Equals(Empty)
+- uid: Calabonga.OperationResults.Empty.Equals(System.Object)
+  name: Equals(Object)
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_Equals_System_Object_
+  commentId: M:Calabonga.OperationResults.Empty.Equals(System.Object)
+  fullName: Calabonga.OperationResults.Empty.Equals(System.Object)
+  nameWithType: Empty.Equals(Object)
+- uid: Calabonga.OperationResults.Empty.Equals*
+  name: Equals
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_Equals_
+  commentId: Overload:Calabonga.OperationResults.Empty.Equals
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Empty.Equals
+  nameWithType: Empty.Equals
+- uid: Calabonga.OperationResults.Empty.GetHashCode
+  name: GetHashCode()
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_GetHashCode
+  commentId: M:Calabonga.OperationResults.Empty.GetHashCode
+  fullName: Calabonga.OperationResults.Empty.GetHashCode()
+  nameWithType: Empty.GetHashCode()
+- uid: Calabonga.OperationResults.Empty.GetHashCode*
+  name: GetHashCode
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_GetHashCode_
+  commentId: Overload:Calabonga.OperationResults.Empty.GetHashCode
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Empty.GetHashCode
+  nameWithType: Empty.GetHashCode
+- uid: Calabonga.OperationResults.Empty.IComparable#CompareTo(System.Object)
+  name: IComparable.CompareTo(Object)
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_IComparable_CompareTo_System_Object_
+  commentId: M:Calabonga.OperationResults.Empty.IComparable#CompareTo(System.Object)
+  fullName: Calabonga.OperationResults.Empty.IComparable.CompareTo(System.Object)
+  nameWithType: Empty.IComparable.CompareTo(Object)
+- uid: Calabonga.OperationResults.Empty.IComparable#CompareTo*
+  name: IComparable.CompareTo
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_IComparable_CompareTo_
+  commentId: Overload:Calabonga.OperationResults.Empty.IComparable#CompareTo
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Empty.IComparable.CompareTo
+  nameWithType: Empty.IComparable.CompareTo
+- uid: Calabonga.OperationResults.Empty.op_Equality(Calabonga.OperationResults.Empty,Calabonga.OperationResults.Empty)
+  name: Equality(Empty, Empty)
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_op_Equality_Calabonga_OperationResults_Empty_Calabonga_OperationResults_Empty_
+  commentId: M:Calabonga.OperationResults.Empty.op_Equality(Calabonga.OperationResults.Empty,Calabonga.OperationResults.Empty)
+  fullName: Calabonga.OperationResults.Empty.Equality(Calabonga.OperationResults.Empty, Calabonga.OperationResults.Empty)
+  nameWithType: Empty.Equality(Empty, Empty)
+- uid: Calabonga.OperationResults.Empty.op_Equality*
+  name: Equality
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_op_Equality_
+  commentId: Overload:Calabonga.OperationResults.Empty.op_Equality
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Empty.Equality
+  nameWithType: Empty.Equality
+- uid: Calabonga.OperationResults.Empty.op_Inequality(Calabonga.OperationResults.Empty,Calabonga.OperationResults.Empty)
+  name: Inequality(Empty, Empty)
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_op_Inequality_Calabonga_OperationResults_Empty_Calabonga_OperationResults_Empty_
+  commentId: M:Calabonga.OperationResults.Empty.op_Inequality(Calabonga.OperationResults.Empty,Calabonga.OperationResults.Empty)
+  fullName: Calabonga.OperationResults.Empty.Inequality(Calabonga.OperationResults.Empty, Calabonga.OperationResults.Empty)
+  nameWithType: Empty.Inequality(Empty, Empty)
+- uid: Calabonga.OperationResults.Empty.op_Inequality*
+  name: Inequality
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_op_Inequality_
+  commentId: Overload:Calabonga.OperationResults.Empty.op_Inequality
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Empty.Inequality
+  nameWithType: Empty.Inequality
+- uid: Calabonga.OperationResults.Empty.Task
+  name: Task
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_Task
+  commentId: P:Calabonga.OperationResults.Empty.Task
+  fullName: Calabonga.OperationResults.Empty.Task
+  nameWithType: Empty.Task
+- uid: Calabonga.OperationResults.Empty.Task*
+  name: Task
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_Task_
+  commentId: Overload:Calabonga.OperationResults.Empty.Task
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Empty.Task
+  nameWithType: Empty.Task
+- uid: Calabonga.OperationResults.Empty.ToString
+  name: ToString()
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_ToString
+  commentId: M:Calabonga.OperationResults.Empty.ToString
+  fullName: Calabonga.OperationResults.Empty.ToString()
+  nameWithType: Empty.ToString()
+- uid: Calabonga.OperationResults.Empty.ToString*
+  name: ToString
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_ToString_
+  commentId: Overload:Calabonga.OperationResults.Empty.ToString
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Empty.ToString
+  nameWithType: Empty.ToString
+- uid: Calabonga.OperationResults.Empty.Value
+  name: Value
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_Value
+  commentId: P:Calabonga.OperationResults.Empty.Value
+  fullName: Calabonga.OperationResults.Empty.Value
+  nameWithType: Empty.Value
+- uid: Calabonga.OperationResults.Empty.Value*
+  name: Value
+  href: api/Calabonga.OperationResults.Empty.html#Calabonga_OperationResults_Empty_Value_
+  commentId: Overload:Calabonga.OperationResults.Empty.Value
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Empty.Value
+  nameWithType: Empty.Value
+- uid: Calabonga.OperationResults.IHaveDataObject
+  name: IHaveDataObject
+  href: api/Calabonga.OperationResults.IHaveDataObject.html
+  commentId: T:Calabonga.OperationResults.IHaveDataObject
+  fullName: Calabonga.OperationResults.IHaveDataObject
+  nameWithType: IHaveDataObject
+- uid: Calabonga.OperationResults.IHaveDataObject.AddData(System.Object)
+  name: AddData(Object)
+  href: api/Calabonga.OperationResults.IHaveDataObject.html#Calabonga_OperationResults_IHaveDataObject_AddData_System_Object_
+  commentId: M:Calabonga.OperationResults.IHaveDataObject.AddData(System.Object)
+  fullName: Calabonga.OperationResults.IHaveDataObject.AddData(System.Object)
+  nameWithType: IHaveDataObject.AddData(Object)
+- uid: Calabonga.OperationResults.IHaveDataObject.AddData*
+  name: AddData
+  href: api/Calabonga.OperationResults.IHaveDataObject.html#Calabonga_OperationResults_IHaveDataObject_AddData_
+  commentId: Overload:Calabonga.OperationResults.IHaveDataObject.AddData
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.IHaveDataObject.AddData
+  nameWithType: IHaveDataObject.AddData
+- uid: Calabonga.OperationResults.IMetadataMessage
+  name: IMetadataMessage
+  href: api/Calabonga.OperationResults.IMetadataMessage.html
+  commentId: T:Calabonga.OperationResults.IMetadataMessage
+  fullName: Calabonga.OperationResults.IMetadataMessage
+  nameWithType: IMetadataMessage
+- uid: Calabonga.OperationResults.IMetadataMessage.DataObject
+  name: DataObject
+  href: api/Calabonga.OperationResults.IMetadataMessage.html#Calabonga_OperationResults_IMetadataMessage_DataObject
+  commentId: P:Calabonga.OperationResults.IMetadataMessage.DataObject
+  fullName: Calabonga.OperationResults.IMetadataMessage.DataObject
+  nameWithType: IMetadataMessage.DataObject
+- uid: Calabonga.OperationResults.IMetadataMessage.DataObject*
+  name: DataObject
+  href: api/Calabonga.OperationResults.IMetadataMessage.html#Calabonga_OperationResults_IMetadataMessage_DataObject_
+  commentId: Overload:Calabonga.OperationResults.IMetadataMessage.DataObject
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.IMetadataMessage.DataObject
+  nameWithType: IMetadataMessage.DataObject
+- uid: Calabonga.OperationResults.IMetadataMessage.Message
+  name: Message
+  href: api/Calabonga.OperationResults.IMetadataMessage.html#Calabonga_OperationResults_IMetadataMessage_Message
+  commentId: P:Calabonga.OperationResults.IMetadataMessage.Message
+  fullName: Calabonga.OperationResults.IMetadataMessage.Message
+  nameWithType: IMetadataMessage.Message
+- uid: Calabonga.OperationResults.IMetadataMessage.Message*
+  name: Message
+  href: api/Calabonga.OperationResults.IMetadataMessage.html#Calabonga_OperationResults_IMetadataMessage_Message_
+  commentId: Overload:Calabonga.OperationResults.IMetadataMessage.Message
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.IMetadataMessage.Message
+  nameWithType: IMetadataMessage.Message
+- uid: Calabonga.OperationResults.Metadata
+  name: Metadata
+  href: api/Calabonga.OperationResults.Metadata.html
+  commentId: T:Calabonga.OperationResults.Metadata
+  fullName: Calabonga.OperationResults.Metadata
+  nameWithType: Metadata
+- uid: Calabonga.OperationResults.Metadata.#ctor
+  name: Metadata()
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata__ctor
+  commentId: M:Calabonga.OperationResults.Metadata.#ctor
+  fullName: Calabonga.OperationResults.Metadata.Metadata()
+  nameWithType: Metadata.Metadata()
+- uid: Calabonga.OperationResults.Metadata.#ctor(Calabonga.OperationResults.OperationResult,System.String)
+  name: Metadata(OperationResult, String)
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata__ctor_Calabonga_OperationResults_OperationResult_System_String_
+  commentId: M:Calabonga.OperationResults.Metadata.#ctor(Calabonga.OperationResults.OperationResult,System.String)
+  fullName: Calabonga.OperationResults.Metadata.Metadata(Calabonga.OperationResults.OperationResult, System.String)
+  nameWithType: Metadata.Metadata(OperationResult, String)
+- uid: Calabonga.OperationResults.Metadata.#ctor(Calabonga.OperationResults.OperationResult,System.String,Calabonga.OperationResults.MetadataType)
+  name: Metadata(OperationResult, String, MetadataType)
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata__ctor_Calabonga_OperationResults_OperationResult_System_String_Calabonga_OperationResults_MetadataType_
+  commentId: M:Calabonga.OperationResults.Metadata.#ctor(Calabonga.OperationResults.OperationResult,System.String,Calabonga.OperationResults.MetadataType)
+  fullName: Calabonga.OperationResults.Metadata.Metadata(Calabonga.OperationResults.OperationResult, System.String, Calabonga.OperationResults.MetadataType)
+  nameWithType: Metadata.Metadata(OperationResult, String, MetadataType)
+- uid: Calabonga.OperationResults.Metadata.#ctor*
+  name: Metadata
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata__ctor_
+  commentId: Overload:Calabonga.OperationResults.Metadata.#ctor
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Metadata.Metadata
+  nameWithType: Metadata.Metadata
+- uid: Calabonga.OperationResults.Metadata._source
+  name: _source
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata__source
+  commentId: F:Calabonga.OperationResults.Metadata._source
+  fullName: Calabonga.OperationResults.Metadata._source
+  nameWithType: Metadata._source
+- uid: Calabonga.OperationResults.Metadata.AddData(System.Object)
+  name: AddData(Object)
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata_AddData_System_Object_
+  commentId: M:Calabonga.OperationResults.Metadata.AddData(System.Object)
+  fullName: Calabonga.OperationResults.Metadata.AddData(System.Object)
+  nameWithType: Metadata.AddData(Object)
+- uid: Calabonga.OperationResults.Metadata.AddData*
+  name: AddData
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata_AddData_
+  commentId: Overload:Calabonga.OperationResults.Metadata.AddData
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Metadata.AddData
+  nameWithType: Metadata.AddData
+- uid: Calabonga.OperationResults.Metadata.DataObject
+  name: DataObject
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata_DataObject
+  commentId: P:Calabonga.OperationResults.Metadata.DataObject
+  fullName: Calabonga.OperationResults.Metadata.DataObject
+  nameWithType: Metadata.DataObject
+- uid: Calabonga.OperationResults.Metadata.DataObject*
+  name: DataObject
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata_DataObject_
+  commentId: Overload:Calabonga.OperationResults.Metadata.DataObject
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Metadata.DataObject
+  nameWithType: Metadata.DataObject
+- uid: Calabonga.OperationResults.Metadata.Message
+  name: Message
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata_Message
+  commentId: P:Calabonga.OperationResults.Metadata.Message
+  fullName: Calabonga.OperationResults.Metadata.Message
+  nameWithType: Metadata.Message
+- uid: Calabonga.OperationResults.Metadata.Message*
+  name: Message
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata_Message_
+  commentId: Overload:Calabonga.OperationResults.Metadata.Message
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Metadata.Message
+  nameWithType: Metadata.Message
+- uid: Calabonga.OperationResults.Metadata.Type
+  name: Type
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata_Type
+  commentId: P:Calabonga.OperationResults.Metadata.Type
+  fullName: Calabonga.OperationResults.Metadata.Type
+  nameWithType: Metadata.Type
+- uid: Calabonga.OperationResults.Metadata.Type*
+  name: Type
+  href: api/Calabonga.OperationResults.Metadata.html#Calabonga_OperationResults_Metadata_Type_
+  commentId: Overload:Calabonga.OperationResults.Metadata.Type
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.Metadata.Type
+  nameWithType: Metadata.Type
+- uid: Calabonga.OperationResults.MetadataType
+  name: MetadataType
+  href: api/Calabonga.OperationResults.MetadataType.html
+  commentId: T:Calabonga.OperationResults.MetadataType
+  fullName: Calabonga.OperationResults.MetadataType
+  nameWithType: MetadataType
+- uid: Calabonga.OperationResults.MetadataType.Error
+  name: Error
+  href: api/Calabonga.OperationResults.MetadataType.html#Calabonga_OperationResults_MetadataType_Error
+  commentId: F:Calabonga.OperationResults.MetadataType.Error
+  fullName: Calabonga.OperationResults.MetadataType.Error
+  nameWithType: MetadataType.Error
+- uid: Calabonga.OperationResults.MetadataType.Info
+  name: Info
+  href: api/Calabonga.OperationResults.MetadataType.html#Calabonga_OperationResults_MetadataType_Info
+  commentId: F:Calabonga.OperationResults.MetadataType.Info
+  fullName: Calabonga.OperationResults.MetadataType.Info
+  nameWithType: MetadataType.Info
+- uid: Calabonga.OperationResults.MetadataType.Success
+  name: Success
+  href: api/Calabonga.OperationResults.MetadataType.html#Calabonga_OperationResults_MetadataType_Success
+  commentId: F:Calabonga.OperationResults.MetadataType.Success
+  fullName: Calabonga.OperationResults.MetadataType.Success
+  nameWithType: MetadataType.Success
+- uid: Calabonga.OperationResults.MetadataType.Warning
+  name: Warning
+  href: api/Calabonga.OperationResults.MetadataType.html#Calabonga_OperationResults_MetadataType_Warning
+  commentId: F:Calabonga.OperationResults.MetadataType.Warning
+  fullName: Calabonga.OperationResults.MetadataType.Warning
+  nameWithType: MetadataType.Warning
+- uid: Calabonga.OperationResults.OperationResult
+  name: OperationResult
+  href: api/Calabonga.OperationResults.OperationResult.html
+  commentId: T:Calabonga.OperationResults.OperationResult
+  fullName: Calabonga.OperationResults.OperationResult
+  nameWithType: OperationResult
+- uid: Calabonga.OperationResults.OperationResult.CreateResult*
+  name: CreateResult
+  href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_CreateResult_
+  commentId: Overload:Calabonga.OperationResults.OperationResult.CreateResult
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResult.CreateResult
+  nameWithType: OperationResult.CreateResult
+- uid: Calabonga.OperationResults.OperationResult.CreateResult``1
+  name: CreateResult<TResult>()
+  href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_CreateResult__1
+  commentId: M:Calabonga.OperationResults.OperationResult.CreateResult``1
+  name.vb: CreateResult(Of TResult)()
+  fullName: Calabonga.OperationResults.OperationResult.CreateResult<TResult>()
+  fullName.vb: Calabonga.OperationResults.OperationResult.CreateResult(Of TResult)()
+  nameWithType: OperationResult.CreateResult<TResult>()
+  nameWithType.vb: OperationResult.CreateResult(Of TResult)()
+- uid: Calabonga.OperationResults.OperationResult.CreateResult``1(``0,System.Nullable{Exception})
+  name: CreateResult<TResult>(TResult, Nullable<Exception>)
+  href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_CreateResult__1___0_System_Nullable_Exception__
+  commentId: M:Calabonga.OperationResults.OperationResult.CreateResult``1(``0,System.Nullable{Exception})
+  name.vb: CreateResult(Of TResult)(TResult, Nullable(Of Exception))
+  fullName: Calabonga.OperationResults.OperationResult.CreateResult<TResult>(TResult, System.Nullable<Exception>)
+  fullName.vb: Calabonga.OperationResults.OperationResult.CreateResult(Of TResult)(TResult, System.Nullable(Of Exception))
+  nameWithType: OperationResult.CreateResult<TResult>(TResult, Nullable<Exception>)
+  nameWithType.vb: OperationResult.CreateResult(Of TResult)(TResult, Nullable(Of Exception))
+- uid: Calabonga.OperationResults.OperationResult.Exception
+  name: Exception
+  href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_Exception
+  commentId: P:Calabonga.OperationResults.OperationResult.Exception
+  fullName: Calabonga.OperationResults.OperationResult.Exception
+  nameWithType: OperationResult.Exception
+- uid: Calabonga.OperationResults.OperationResult.Exception*
+  name: Exception
+  href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_Exception_
+  commentId: Overload:Calabonga.OperationResults.OperationResult.Exception
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResult.Exception
+  nameWithType: OperationResult.Exception
+- uid: Calabonga.OperationResults.OperationResult.Metadata
+  name: Metadata
+  href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_Metadata
+  commentId: P:Calabonga.OperationResults.OperationResult.Metadata
+  fullName: Calabonga.OperationResults.OperationResult.Metadata
+  nameWithType: OperationResult.Metadata
+- uid: Calabonga.OperationResults.OperationResult.Metadata*
+  name: Metadata
+  href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_Metadata_
+  commentId: Overload:Calabonga.OperationResults.OperationResult.Metadata
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResult.Metadata
+  nameWithType: OperationResult.Metadata
+- uid: Calabonga.OperationResults.OperationResult`1
+  name: OperationResult<T>
+  href: api/Calabonga.OperationResults.OperationResult-1.html
+  commentId: T:Calabonga.OperationResults.OperationResult`1
+  name.vb: OperationResult(Of T)
+  fullName: Calabonga.OperationResults.OperationResult<T>
+  fullName.vb: Calabonga.OperationResults.OperationResult(Of T)
+  nameWithType: OperationResult<T>
+  nameWithType.vb: OperationResult(Of T)
+- uid: Calabonga.OperationResults.OperationResult`1.Ok
+  name: Ok
+  href: api/Calabonga.OperationResults.OperationResult-1.html#Calabonga_OperationResults_OperationResult_1_Ok
+  commentId: P:Calabonga.OperationResults.OperationResult`1.Ok
+  fullName: Calabonga.OperationResults.OperationResult<T>.Ok
+  fullName.vb: Calabonga.OperationResults.OperationResult(Of T).Ok
+  nameWithType: OperationResult<T>.Ok
+  nameWithType.vb: OperationResult(Of T).Ok
+- uid: Calabonga.OperationResults.OperationResult`1.Ok*
+  name: Ok
+  href: api/Calabonga.OperationResults.OperationResult-1.html#Calabonga_OperationResults_OperationResult_1_Ok_
+  commentId: Overload:Calabonga.OperationResults.OperationResult`1.Ok
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResult<T>.Ok
+  fullName.vb: Calabonga.OperationResults.OperationResult(Of T).Ok
+  nameWithType: OperationResult<T>.Ok
+  nameWithType.vb: OperationResult(Of T).Ok
+- uid: Calabonga.OperationResults.OperationResult`1.Result
+  name: Result
+  href: api/Calabonga.OperationResults.OperationResult-1.html#Calabonga_OperationResults_OperationResult_1_Result
+  commentId: P:Calabonga.OperationResults.OperationResult`1.Result
+  fullName: Calabonga.OperationResults.OperationResult<T>.Result
+  fullName.vb: Calabonga.OperationResults.OperationResult(Of T).Result
+  nameWithType: OperationResult<T>.Result
+  nameWithType.vb: OperationResult(Of T).Result
+- uid: Calabonga.OperationResults.OperationResult`1.Result*
+  name: Result
+  href: api/Calabonga.OperationResults.OperationResult-1.html#Calabonga_OperationResults_OperationResult_1_Result_
+  commentId: Overload:Calabonga.OperationResults.OperationResult`1.Result
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResult<T>.Result
+  fullName.vb: Calabonga.OperationResults.OperationResult(Of T).Result
+  nameWithType: OperationResult<T>.Result
+  nameWithType.vb: OperationResult(Of T).Result
+- uid: Calabonga.OperationResults.OperationResultExtensions
+  name: OperationResultExtensions
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html
+  commentId: T:Calabonga.OperationResults.OperationResultExtensions
+  fullName: Calabonga.OperationResults.OperationResultExtensions
+  nameWithType: OperationResultExtensions
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult,System.Nullable{Exception})
+  name: AddError(OperationResult, Nullable<Exception>)
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddError_Calabonga_OperationResults_OperationResult_System_Nullable_Exception__
+  commentId: M:Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult,System.Nullable{Exception})
+  name.vb: AddError(OperationResult, Nullable(Of Exception))
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult, System.Nullable<Exception>)
+  fullName.vb: Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult, System.Nullable(Of Exception))
+  nameWithType: OperationResultExtensions.AddError(OperationResult, Nullable<Exception>)
+  nameWithType.vb: OperationResultExtensions.AddError(OperationResult, Nullable(Of Exception))
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult,System.String)
+  name: AddError(OperationResult, String)
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddError_Calabonga_OperationResults_OperationResult_System_String_
+  commentId: M:Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult,System.String)
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult, System.String)
+  nameWithType: OperationResultExtensions.AddError(OperationResult, String)
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult,System.String,Exception)
+  name: AddError(OperationResult, String, Exception)
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddError_Calabonga_OperationResults_OperationResult_System_String_Exception_
+  commentId: M:Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult,System.String,Exception)
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddError(Calabonga.OperationResults.OperationResult, System.String, Exception)
+  nameWithType: OperationResultExtensions.AddError(OperationResult, String, Exception)
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddError*
+  name: AddError
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddError_
+  commentId: Overload:Calabonga.OperationResults.OperationResultExtensions.AddError
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddError
+  nameWithType: OperationResultExtensions.AddError
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddInfo(Calabonga.OperationResults.OperationResult,System.String)
+  name: AddInfo(OperationResult, String)
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddInfo_Calabonga_OperationResults_OperationResult_System_String_
+  commentId: M:Calabonga.OperationResults.OperationResultExtensions.AddInfo(Calabonga.OperationResults.OperationResult,System.String)
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddInfo(Calabonga.OperationResults.OperationResult, System.String)
+  nameWithType: OperationResultExtensions.AddInfo(OperationResult, String)
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddInfo*
+  name: AddInfo
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddInfo_
+  commentId: Overload:Calabonga.OperationResults.OperationResultExtensions.AddInfo
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddInfo
+  nameWithType: OperationResultExtensions.AddInfo
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddSuccess(Calabonga.OperationResults.OperationResult,System.String)
+  name: AddSuccess(OperationResult, String)
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddSuccess_Calabonga_OperationResults_OperationResult_System_String_
+  commentId: M:Calabonga.OperationResults.OperationResultExtensions.AddSuccess(Calabonga.OperationResults.OperationResult,System.String)
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddSuccess(Calabonga.OperationResults.OperationResult, System.String)
+  nameWithType: OperationResultExtensions.AddSuccess(OperationResult, String)
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddSuccess*
+  name: AddSuccess
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddSuccess_
+  commentId: Overload:Calabonga.OperationResults.OperationResultExtensions.AddSuccess
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddSuccess
+  nameWithType: OperationResultExtensions.AddSuccess
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddWarning(Calabonga.OperationResults.OperationResult,System.String)
+  name: AddWarning(OperationResult, String)
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddWarning_Calabonga_OperationResults_OperationResult_System_String_
+  commentId: M:Calabonga.OperationResults.OperationResultExtensions.AddWarning(Calabonga.OperationResults.OperationResult,System.String)
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddWarning(Calabonga.OperationResults.OperationResult, System.String)
+  nameWithType: OperationResultExtensions.AddWarning(OperationResult, String)
+- uid: Calabonga.OperationResults.OperationResultExtensions.AddWarning*
+  name: AddWarning
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_AddWarning_
+  commentId: Overload:Calabonga.OperationResults.OperationResultExtensions.AddWarning
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResultExtensions.AddWarning
+  nameWithType: OperationResultExtensions.AddWarning
+- uid: Calabonga.OperationResults.OperationResultExtensions.GetMetadataMessages(Calabonga.OperationResults.OperationResult)
+  name: GetMetadataMessages(OperationResult)
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_GetMetadataMessages_Calabonga_OperationResults_OperationResult_
+  commentId: M:Calabonga.OperationResults.OperationResultExtensions.GetMetadataMessages(Calabonga.OperationResults.OperationResult)
+  fullName: Calabonga.OperationResults.OperationResultExtensions.GetMetadataMessages(Calabonga.OperationResults.OperationResult)
+  nameWithType: OperationResultExtensions.GetMetadataMessages(OperationResult)
+- uid: Calabonga.OperationResults.OperationResultExtensions.GetMetadataMessages*
+  name: GetMetadataMessages
+  href: api/Calabonga.OperationResults.OperationResultExtensions.html#Calabonga_OperationResults_OperationResultExtensions_GetMetadataMessages_
+  commentId: Overload:Calabonga.OperationResults.OperationResultExtensions.GetMetadataMessages
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResultExtensions.GetMetadataMessages
+  nameWithType: OperationResultExtensions.GetMetadataMessages

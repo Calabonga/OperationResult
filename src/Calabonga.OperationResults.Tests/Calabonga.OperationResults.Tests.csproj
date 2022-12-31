@@ -4,6 +4,12 @@
         <TargetFramework>net6.0</TargetFramework>
         <IsPackable>false</IsPackable>
         <Nullable>enable</Nullable>
+        <RootNamespace>Calabonga.OperationResults.Tests</RootNamespace>
+        <AssemblyName>Сalabonga.OperationResults.Tests</AssemblyName>
+        <Authors>Calabonga.OperationResults.Tests</Authors>
+        <Company>Calabonga SOFT</Company>
+        <Product>Calabonga.OperationResults.Tests</Product>
+        <PackageId>Calabonga.OperationResults.Tests</PackageId>
     </PropertyGroup>
 
     <ItemGroup>
