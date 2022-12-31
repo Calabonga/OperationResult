@@ -1,11 +1,16 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30517.126
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33205.214
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.OperationResults", "Calabonga.OperationResults\Calabonga.OperationResults.csproj", "{E453A0C8-54C5-442A-85C9-2E9BA2E156C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calabonga.OperationResults", "Calabonga.OperationResults\Calabonga.OperationResults.csproj", "{E453A0C8-54C5-442A-85C9-2E9BA2E156C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calabonga.OperationResults.Tests", "Calabonga.OperationResults.Tests\Calabonga.OperationResults.Tests.csproj", "{A2CB8326-F337-4FC3-9F8C-7490A5A63A1C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Calabonga.OperationResults.Tests", "Calabonga.OperationResults.Tests\Calabonga.OperationResults.Tests.csproj", "{A2CB8326-F337-4FC3-9F8C-7490A5A63A1C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{1EB09BCC-5FCE-433A-AE0F-9CBD3D9CD02B}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\main.yml = ..\.github\workflows\main.yml
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

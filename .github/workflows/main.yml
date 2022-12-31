@@ -1,27 +1,66 @@
-name: .NET Core
+#name: .NET Core
+
+#on:
+#  push:
+#    branches: [master]
+
+#jobs:
+#  build:
+#    runs-on: ubuntu-latest
+
+#    steps:
+#      - uses: actions/checkout@v2
+#      - name: Setup .NET Core
+#        uses: actions/setup-dotnet@v1
+#        with:
+#          dotnet-version: 6.0.x
+#      - name: Install dependencies
+#        run: dotnet restore src/Calabonga.OperationResults.sln
+#      - name: Build
+#        run: dotnet build src/Calabonga.OperationResults.sln --configuration Release --no-restore
+#      - name: Tests
+#        run: dotnet test src/Calabonga.OperationResults.Tests/Calabonga.OperationResults.Tests.csproj
+#      - name: Publish OperationResultCore
+#        uses: brandedoutcast/publish-nuget@v2.5.2
+#        with:
+#          PROJECT_FILE_PATH: src/Calabonga.OperationResults/Calabonga.OperationResults.csproj
+#          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+
+
+name: .NET Core 6.0.x
 
 on:
   push:
     branches: [master]
+  
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   build:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
-      - uses: actions/checkout@v2
-      - name: Setup .NET Core
-        uses: actions/setup-dotnet@v1
+      - uses: actions/checkout@v3
+
+      - name: Set up .NET Core
+        uses: actions/setup-dotnet@v2
         with:
           dotnet-version: 6.0.x
+
       - name: Install dependencies
         run: dotnet restore src/Calabonga.OperationResults.sln
-      - name: Build
+
+      - name: Build the NuGet package
         run: dotnet build src/Calabonga.OperationResults.sln --configuration Release --no-restore
-      - name: Tests
+
+      - name: Run Unit Tests
         run: dotnet test src/Calabonga.OperationResults.Tests/Calabonga.OperationResults.Tests.csproj
-      - name: Publish OperationResultCore
-        uses: brandedoutcast/publish-nuget@v2.5.2
-        with:
-          PROJECT_FILE_PATH: src/Calabonga.OperationResults/Calabonga.OperationResults.csproj
-          NUGET_KEY: ${{secrets.NUGET_API_KEY}}
+
+      - name: Publish
+        run: dotnet publish src/Calabonga.OperationResults/Calabonga.OperationResults.csproj --configuration Release --output ${{env.DOTNET_ROOT}}\Package
+
+      - name: Publish NuGet Package OperationResultCore
+        run: dotnet nuget push ${{env.DOTNET_ROOT}}\Package\*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
