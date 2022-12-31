@@ -25,19 +25,16 @@ jobs:
         run: dotnet restore src/Calabonga.OperationResults.sln
 
       - name: Build the NuGet package
-        run: dotnet build src/Calabonga.OperationResults.sln --configuration Release --no-restore
+        run: dotnet build src/Calabonga.OperationResults.sln --configuration Release --output ${{env.DOTNET_ROOT}}\Package
 
       - run: ls src
+      
+      - run: ls src/Calabonga.OperationResults
+      
+      - run: ls ${{env.DOTNET_ROOT}}\Package
 
       - name: Run Unit Tests
         run: dotnet test src/Calabonga.OperationResults.Tests/Calabonga.OperationResults.Tests.csproj
-
-      - name: Publish
-        run: dotnet publish src/Calabonga.OperationResults/Calabonga.OperationResults.csproj --configuration Release --output ${{env.DOTNET_ROOT}}\Package
-
-      - run: ls
-
-      - run: ls ${{env.DOTNET_ROOT}}\Package
 
       - name: Publish NuGet Package OperationResultCore
         run: dotnet nuget push ${{env.DOTNET_ROOT}}\Package\*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
