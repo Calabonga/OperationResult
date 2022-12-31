@@ -1,18 +1,17 @@
-﻿namespace Calabonga.OperationResults
+﻿namespace Calabonga.OperationResults;
+
+/// <summary>
+/// IMetadataMessage and IHaveDataObject interface
+/// </summary>
+public interface IMetadataMessage : IHaveDataObject
 {
     /// <summary>
-    /// IMetadataMessage and IHaveDataObject interface
+    /// Message
     /// </summary>
-    public interface IMetadataMessage : IHaveDataObject
-    {
-        /// <summary>
-        /// Message
-        /// </summary>
-        string? Message { get; }
+    string? Message { get; }
 
-        /// <summary>
-        /// Data object
-        /// </summary>
-        object DataObject { get; }
-    }
+    /// <summary>
+    /// Data object
+    /// </summary>
+    object DataObject { get; }
 }

@@ -6,11 +6,11 @@
         <Nullable>enable</Nullable>
         <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Title>Calabonga.OperationResults</Title>
-        <Version>4.0.2-beta1</Version>
+        <Version>4.0.2-beta2</Version>
         <Authors>Calabonga</Authors>
         <Company>Calabonga SOFT</Company>
         <Product>OperationResultCore</Product>
-        <Description>This is some helpful classes like OperationResult. Simple wrapped for result operation for any returned data from API or MVC</Description>
+        <Description>OperationResult is an implementation of RFC7807. In other words, it's simple wrapper for result operation for any returned data from backend, where you can add additional information about problem or other things</Description>
         <Copyright>Calabonga 2016-2023</Copyright>
         <PackageProjectUrl>https://www.calabonga.net/blog/post/operationresult-the-server-response-is-always-clear-to-the-user</PackageProjectUrl>
         <PackageIcon>logo.png</PackageIcon>
@@ -30,13 +30,6 @@
         
         <IncludeSymbols>False</IncludeSymbols>
     </PropertyGroup>
-
-    <ItemGroup>
-        <None Include="..\..\README.md">
-          <Pack>True</Pack>
-          <PackagePath>\</PackagePath>
-        </None>
-    </ItemGroup>
 
     <ItemGroup>
       <None Update="logo.png">
