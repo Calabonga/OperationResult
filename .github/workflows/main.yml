@@ -27,13 +27,3 @@ jobs:
 
       - name: Publish NuGet Package OperationResultCore
         run: dotnet nuget push ${{env.DOTNET_ROOT}}\Package\*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
-
-
-
-
-
-
-
-
-
-
