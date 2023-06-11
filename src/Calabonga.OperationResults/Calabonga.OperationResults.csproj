@@ -1,48 +1,48 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-    <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-		<ImplicitUsings>enable</ImplicitUsings>
-        <Nullable>enable</Nullable>
-        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-		<Title>Calabonga.OperationResults</Title>
-        <Version>4.0.2-beta2</Version>
-        <Authors>Calabonga</Authors>
-        <Company>Calabonga SOFT</Company>
-        <Product>OperationResultCore</Product>
-        <Description>OperationResult is an implementation of RFC7807. In other words, it's simple wrapper for result operation for any returned data from backend, where you can add additional information about problem or other things</Description>
-        <Copyright>Calabonga 2016-2023</Copyright>
-        <PackageProjectUrl>https://www.calabonga.net/blog/post/operationresult-the-server-response-is-always-clear-to-the-user</PackageProjectUrl>
-        <PackageIcon>logo.png</PackageIcon>
-		<PackageReadmeFile>README.md</PackageReadmeFile>
-		<RepositoryUrl>https://github.com/Calabonga/OperationResult/</RepositoryUrl>
-		<RepositoryType>git</RepositoryType>
-        <PackageTags>calabonga web api operation result asp net core response rfc7807</PackageTags>
-        <PackageReleaseNotes>NET6.0 nullable optimized</PackageReleaseNotes>
-		<PackageLicenseExpression>MIT</PackageLicenseExpression>
-		<AssemblyName>Calabonga.OperationResults</AssemblyName>
-        <RootNamespace>Calabonga.OperationResults</RootNamespace>
-        <AssemblyVersion>4.0.2.0</AssemblyVersion>
-        <FileVersion>4.0.2.0</FileVersion>
-        <PackageId>OperationResultCore</PackageId>
-        
-        <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
-        
-        <IncludeSymbols>False</IncludeSymbols>
-    </PropertyGroup>
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Title>Calabonga.OperationResults</Title>
+    <Version>4.0.2</Version>
+    <Authors>Calabonga</Authors>
+    <Company>Calabonga SOFT</Company>
+    <Product>OperationResultCore</Product>
+    <Description>OperationResult is an implementation of RFC7807. In other words, it's simple wrapper for result operation for any returned data from backend, where you can add additional information about problem or other things</Description>
+    <Copyright>Calabonga © 2016-2023</Copyright>
+    <PackageProjectUrl>https://www.calabonga.net/blog/post/operationresult-the-server-response-is-always-clear-to-the-user</PackageProjectUrl>
+    <PackageIcon>logo.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/Calabonga/OperationResult/</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>calabonga web api operation result asp net core response rfc7807</PackageTags>
+    <PackageReleaseNotes>NET6.0 nullable optimized</PackageReleaseNotes>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <AssemblyName>Calabonga.OperationResults</AssemblyName>
+    <RootNamespace>Calabonga.OperationResults</RootNamespace>
+    <AssemblyVersion>4.0.2.0</AssemblyVersion>
+    <FileVersion>4.0.2.0</FileVersion>
+    <PackageId>OperationResultCore</PackageId>
 
-    <ItemGroup>
-      <None Include="..\..\README.md">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
-    </ItemGroup>
+    <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>
 
-    <ItemGroup>
-      <None Update="logo.png">
-        <Pack>True</Pack>
-        <PackagePath>\</PackagePath>
-      </None>
-    </ItemGroup>
+    <IncludeSymbols>False</IncludeSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Include="..\..\README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="logo.png">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
 
 </Project>

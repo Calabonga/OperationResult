@@ -921,5 +921,34 @@ namespace Calabonga.OperationResults.Tests
             Assert.NotNull(sut.Exception);
             Assert.NotNull(sut.Metadata);
         }
+        
+        [Fact]
+        [Trait("OperationResult", "Empty")]
+        public void ItShould_return_Empty()
+        {
+            // arrange
+            const string expected = "TEST";
+            var sut = _fixture.Create<Empty>();
+
+            // act
+
+            // assert
+            Assert.IsType<Empty>(sut.Result);
+        }
+
+        [Fact]
+        [Trait("OperationResult", "Empty")]
+        public void ItShould_return_Empty2()
+        {
+            // arrange
+            const string expected = "TEST";
+            var sut = OperationResult.CreateResult<Empty>();
+
+            // act
+            sut.Result = Empty.Value;
+
+            // assert
+            Assert.IsType<Empty>(sut.Result);
+        }
     }
 }
