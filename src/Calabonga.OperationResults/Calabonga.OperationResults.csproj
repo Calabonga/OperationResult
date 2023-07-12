@@ -6,7 +6,7 @@
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <Title>Calabonga.OperationResults</Title>
-    <Version>4.0.3</Version>
+    <Version>4.1.0-beta1</Version>
     <Authors>Calabonga</Authors>
     <Company>Calabonga SOFT</Company>
     <Product>OperationResultCore</Product>
@@ -18,12 +18,12 @@
     <RepositoryUrl>https://github.com/Calabonga/OperationResult/</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>calabonga web api operation result asp net core response rfc7807</PackageTags>
-    <PackageReleaseNotes>Unit-test added</PackageReleaseNotes>
+    <PackageReleaseNotes>OperationResult.WithException added</PackageReleaseNotes>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
     <AssemblyName>Calabonga.OperationResults</AssemblyName>
     <RootNamespace>Calabonga.OperationResults</RootNamespace>
-    <AssemblyVersion>4.0.3.0</AssemblyVersion>
-    <FileVersion>4.0.3.0</FileVersion>
+    <AssemblyVersion>4.1.0.0</AssemblyVersion>
+    <FileVersion>4.1.0.0</FileVersion>
     <PackageId>OperationResultCore</PackageId>
 
     <PackageIconUrl>https://www.calabonga.net/images/logo.png</PackageIconUrl>

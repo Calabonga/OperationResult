@@ -12,11 +12,36 @@ public class OperationResultCoreTests : IClassFixture<OperationResultCoreFixture
 {
     private readonly OperationResultCoreFixture _fixture;
 
-    public OperationResultCoreTests(OperationResultCoreFixture fixture)
+    public OperationResultCoreTests(OperationResultCoreFixture fixture) => _fixture = fixture;
+
+
+    [Fact]
+    [Trait("OperationResult", "WithException")]
+    public void ItShould_be_defined_type_with_exception_result_equals_null()
     {
-        _fixture = fixture;
+        // arrange
+        var customException = new CustomException(Messages.Title1);
+        var sut = OperationResult.WithException<string>(customException);
+
+        // act
+
+        // assert
+        Assert.Null(sut.Result);
     }
 
+    [Fact]
+    [Trait("OperationResult", "WithException")]
+    public void ItShould_be_not_null_with_exception()
+    {
+        // arrange
+        var customException = new CustomException(Messages.Title1);
+        var sut = OperationResult.WithException<string>(customException);
+
+        // act
+
+        // assert
+        Assert.NotNull(sut);
+    }
 
     [Fact]
     [Trait("OperationResult", "UnderTesting")]

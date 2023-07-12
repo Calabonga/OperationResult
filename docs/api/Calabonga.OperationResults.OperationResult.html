@@ -173,12 +173,12 @@ public abstract class OperationResult</code></pre>
 
   <a id="Calabonga_OperationResults_OperationResult_CreateResult_" data-uid="Calabonga.OperationResults.OperationResult.CreateResult*"></a>
   <h4 id="Calabonga_OperationResults_OperationResult_CreateResult__1" data-uid="Calabonga.OperationResults.OperationResult.CreateResult``1">CreateResult&lt;TResult&gt;()</h4>
-  <div class="markdown level1 summary"><p>Returns as factory method OperationResult</p>
+  <div class="markdown level1 summary"><p>Returns as factory method OperationResult with TResult</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OperationResult&lt;TResult&gt; CreateResult&lt;TResult&gt;()</code></pre>
+    <pre><code class="lang-csharp hljs">public static OperationResult&lt;TResult?&gt; CreateResult&lt;TResult&gt;()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-condensed">
@@ -213,13 +213,13 @@ public abstract class OperationResult</code></pre>
 
 
   <a id="Calabonga_OperationResults_OperationResult_CreateResult_" data-uid="Calabonga.OperationResults.OperationResult.CreateResult*"></a>
-  <h4 id="Calabonga_OperationResults_OperationResult_CreateResult__1___0_System_Exception_" data-uid="Calabonga.OperationResults.OperationResult.CreateResult``1(``0,System.Exception)">CreateResult&lt;TResult&gt;(TResult, Exception?)</h4>
+  <h4 id="Calabonga_OperationResults_OperationResult_CreateResult__1___0_System_Exception_" data-uid="Calabonga.OperationResults.OperationResult.CreateResult``1(``0,System.Exception)">CreateResult&lt;TResult&gt;(TResult?, Exception?)</h4>
   <div class="markdown level1 summary"><p>Returns as factory method OperationResult with result and</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="declaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static OperationResult&lt;TResult&gt; CreateResult&lt;TResult&gt;(TResult result, Exception? exception = null)</code></pre>
+    <pre><code class="lang-csharp hljs">public static OperationResult&lt;TResult?&gt; CreateResult&lt;TResult&gt;(TResult? result, Exception? exception = null)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-condensed">
@@ -236,6 +236,64 @@ public abstract class OperationResult</code></pre>
         <td><span class="parametername">result</span></td>
         <td></td>
       </tr>
+      <tr>
+        <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
+        <td><span class="parametername">exception</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="Calabonga.OperationResults.OperationResult-1.html">OperationResult</a>&lt;TResult&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="typeParameters">Type Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="parametername">TResult</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+
+
+  <a id="Calabonga_OperationResults_OperationResult_WithException_" data-uid="Calabonga.OperationResults.OperationResult.WithException*"></a>
+  <h4 id="Calabonga_OperationResults_OperationResult_WithException__1_System_Exception_" data-uid="Calabonga.OperationResults.OperationResult.WithException``1(System.Exception)">WithException&lt;TResult&gt;(Exception)</h4>
+  <div class="markdown level1 summary"><p>Returns as factory method OperationResult but</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="declaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static OperationResult&lt;TResult?&gt; WithException&lt;TResult&gt;(Exception exception)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
       <tr>
         <td><a class="xref" href="https://learn.microsoft.com/dotnet/api/system.exception">Exception</a></td>
         <td><span class="parametername">exception</span></td>

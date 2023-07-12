@@ -23,9 +23,9 @@ public abstract class OperationResult
     /// <param name="result"></param>
     /// <param name="exception"></param>
     /// <returns></returns>
-    public static OperationResult<TResult> CreateResult<TResult>(TResult result, Exception? exception = null)
+    public static OperationResult<TResult?> CreateResult<TResult>(TResult? result, Exception? exception = null)
     {
-        var operation = new OperationResult<TResult>
+        var operation = new OperationResult<TResult?>
         {
             Result = result,
             Exception = exception
@@ -34,13 +34,22 @@ public abstract class OperationResult
     }
 
     /// <summary>
-    /// Returns as factory method OperationResult
+    /// Returns as factory method OperationResult with TResult
     /// </summary>
     /// <typeparam name="TResult"></typeparam>
     /// <returns></returns>
-    public static OperationResult<TResult> CreateResult<TResult>()
+    public static OperationResult<TResult?> CreateResult<TResult>() => CreateResult(default(TResult?));
+
+    /// <summary>
+    /// Returns as factory method OperationResult but 
+    /// </summary>
+    /// <param name="exception"></param>
+    /// <returns></returns>
+    public static OperationResult<TResult?> WithException<TResult>(Exception exception)
     {
-        return CreateResult(default(TResult)!);
+        var op = CreateResult(default(TResult?));
+        op.AddError(exception);
+        return op;
     }
 }
 

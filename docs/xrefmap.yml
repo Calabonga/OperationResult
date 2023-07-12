@@ -343,13 +343,13 @@ references:
   nameWithType: OperationResult.CreateResult<TResult>()
   nameWithType.vb: OperationResult.CreateResult(Of TResult)()
 - uid: Calabonga.OperationResults.OperationResult.CreateResult``1(``0,System.Exception)
-  name: CreateResult<TResult>(TResult, Exception?)
+  name: CreateResult<TResult>(TResult?, Exception?)
   href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_CreateResult__1___0_System_Exception_
   commentId: M:Calabonga.OperationResults.OperationResult.CreateResult``1(``0,System.Exception)
   name.vb: CreateResult(Of TResult)(TResult, Exception)
-  fullName: Calabonga.OperationResults.OperationResult.CreateResult<TResult>(TResult, System.Exception?)
+  fullName: Calabonga.OperationResults.OperationResult.CreateResult<TResult>(TResult?, System.Exception?)
   fullName.vb: Calabonga.OperationResults.OperationResult.CreateResult(Of TResult)(TResult, System.Exception)
-  nameWithType: OperationResult.CreateResult<TResult>(TResult, Exception?)
+  nameWithType: OperationResult.CreateResult<TResult>(TResult?, Exception?)
   nameWithType.vb: OperationResult.CreateResult(Of TResult)(TResult, Exception)
 - uid: Calabonga.OperationResults.OperationResult.Exception
   name: Exception
@@ -377,6 +377,22 @@ references:
   isSpec: "True"
   fullName: Calabonga.OperationResults.OperationResult.Metadata
   nameWithType: OperationResult.Metadata
+- uid: Calabonga.OperationResults.OperationResult.WithException*
+  name: WithException
+  href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_WithException_
+  commentId: Overload:Calabonga.OperationResults.OperationResult.WithException
+  isSpec: "True"
+  fullName: Calabonga.OperationResults.OperationResult.WithException
+  nameWithType: OperationResult.WithException
+- uid: Calabonga.OperationResults.OperationResult.WithException``1(System.Exception)
+  name: WithException<TResult>(Exception)
+  href: api/Calabonga.OperationResults.OperationResult.html#Calabonga_OperationResults_OperationResult_WithException__1_System_Exception_
+  commentId: M:Calabonga.OperationResults.OperationResult.WithException``1(System.Exception)
+  name.vb: WithException(Of TResult)(Exception)
+  fullName: Calabonga.OperationResults.OperationResult.WithException<TResult>(System.Exception)
+  fullName.vb: Calabonga.OperationResults.OperationResult.WithException(Of TResult)(System.Exception)
+  nameWithType: OperationResult.WithException<TResult>(Exception)
+  nameWithType.vb: OperationResult.WithException(Of TResult)(Exception)
 - uid: Calabonga.OperationResults.OperationResult`1
   name: OperationResult<T>
   href: api/Calabonga.OperationResults.OperationResult-1.html
