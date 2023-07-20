@@ -14,6 +14,19 @@ public class OperationResultCoreTests : IClassFixture<OperationResultCoreFixture
 
     public OperationResultCoreTests(OperationResultCoreFixture fixture) => _fixture = fixture;
 
+    [Fact]
+    [Trait("OperationResult", "WithException")]
+    public void ItShould_be_defined_type_with_exception_result_equals_null1()
+    {
+        // arrange
+        var customException = new CustomException(Messages.Title1);
+        var sut = OperationResult.WithException<Person>(customException);
+
+        // act
+
+        // assert
+        Assert.Null(sut.Result);
+    }
 
     [Fact]
     [Trait("OperationResult", "WithException")]
