@@ -1004,4 +1004,62 @@ public class OperationResultCoreTests : IClassFixture<OperationResultCoreFixture
         // assert
         Assert.IsType<Empty>(sut.Result);
     }
+
+    [Fact]
+    [Trait("OperationResult", "AddError")]
+    public void ItShould_deserialize_notnull()
+    {
+        // arrange
+        const string expected = "TEST";
+        var sut = _fixture.Create<Person>();
+        var serialized = JsonSerializer.Serialize(sut);
+
+        // act
+        var deserialized = JsonSerializer.Deserialize<OperationResult<Person>>(serialized);
+
+        // assert
+        Assert.NotNull(deserialized);
+    }
+
+    [Fact]
+    [Trait("OperationResult", "AddError")]
+    public void ItShould_deserialize_notnull_Ok_False_when_result_null()
+    {
+        // arrange
+        const string expected = "TEST";
+        var sut = _fixture.Create<Person>();
+        var serialized = JsonSerializer.Serialize(sut);
+
+        // act
+        var deserialized = JsonSerializer.Deserialize<OperationResult<Person>>(serialized, new JsonSerializerOptions
+        {
+            Converters = { new OperationResultConverter<Person>() }
+        });
+
+        // assert
+        Assert.NotNull(deserialized);
+        Assert.False(deserialized.Ok);
+    }
+
+    [Fact]
+    [Trait("OperationResult", "AddError")]
+    public void ItShould_deserialize_notnull_Ok()
+    {
+        // arrange
+        var sut = _fixture.Create<Person>();
+        sut.Result = new Person() { FirstName = "FirstName", LastName = "LastName" };
+        sut.AddInfo("Message for metadata");
+        var serialized = JsonSerializer.Serialize(sut);
+
+        // act
+        var deserialized = JsonSerializer.Deserialize<OperationResult<Person>>(serialized, new JsonSerializerOptions
+        {
+            Converters = { new OperationResultConverter<Person>() }
+        });
+
+        // assert
+        Assert.NotNull(deserialized);
+        Assert.True(deserialized.Ok);
+        Assert.NotNull(deserialized.Metadata!.Message);
+    }
 }
