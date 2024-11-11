@@ -1,3 +1,9 @@
+# Внимание! Attention!
+
+> Этот репозиторий только для чтения, потому что появилась более продвинутая сборка, в которой реализован тот же функционал - [Calabonga.Results](https://github.com/Calabonga/Calabonga.Results)
+
+> This repository is read-only, because there is a more advanced nuget-package with the same functionality [Calabonga.Results](https://github.com/Calabonga/Calabonga.Results)
+
 # OperationResult
 
 OperationResult is an implementation of RFC7807. In other words, it's simple wrapper for result operation for any returned data from backend, where you can add additional information about problem or other things.
